@@ -56,9 +56,11 @@ int main() {
         }
     }
     // так как у всех сдутентов дата сдачи экзаменов в одинакова, то чтобы получить информацию о дате сдачи экзамено достаточно зачетки одного студента
+    printf("%20s|%20s|%20s\n", "Name", "data", "tprepodavatelb");
+    
     for(auto pr : group.at(0).zch.predmets) {
         
-        std::cout << "Name: " << pr.name << " data: " << pr.data << " prepodavatelb: " << pr.prepodavatelb << std::endl;
+        printf("%20s|%20s|%20s\n", pr.name.c_str(), pr.data.c_str(), pr.prepodavatelb.c_str());
     }
     return 0;
 }
